@@ -1330,22 +1330,20 @@ button, input, textarea {
     justify-content: center;
   }
 
-  /* ── Profile Image (Rectangle 320x150) ─────────────────── */
+  /* ── Profile Circle ─────────────────── */
   .glowing-circle-container {
-    width: 320px;
-    height: 150px;
-    border-radius: 12px;
+    width: 190px;
+    height: 190px;
   }
 
-  .profile-wrapper,
-  .profile-img-container,
-  .glowing-bg {
-    border-radius: 12px;
+  @keyframes orbit-1 {
+    from { transform: translate(-50%, -50%) rotate(0deg) translateX(110px) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg) translateX(110px) rotate(-360deg); }
   }
 
-  .orbit-circle-1,
-  .orbit-circle-2 {
-    display: none; /* Hide circular orbits around a rectangle */
+  @keyframes orbit-2 {
+    from { transform: translate(-50%, -50%) rotate(180deg) translateX(110px) rotate(-180deg); }
+    to   { transform: translate(-50%, -50%) rotate(540deg) translateX(110px) rotate(-540deg); }
   }
 
   .float-badge {
@@ -1484,11 +1482,20 @@ button, input, textarea {
     border-radius: 12px;
   }
 
-  /* ── Profile Image ─────────────────── */
+  /* ── Profile Circle ─────────────────── */
   .glowing-circle-container {
-    width: 320px;
+    width: 150px;
     height: 150px;
-    border-radius: 12px;
+  }
+
+  @keyframes orbit-1 {
+    from { transform: translate(-50%, -50%) rotate(0deg) translateX(90px) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg) translateX(90px) rotate(-360deg); }
+  }
+
+  @keyframes orbit-2 {
+    from { transform: translate(-50%, -50%) rotate(180deg) translateX(90px) rotate(-180deg); }
+    to   { transform: translate(-50%, -50%) rotate(540deg) translateX(90px) rotate(-540deg); }
   }
 
   .float-badge {
