@@ -24,7 +24,7 @@ function App() {
       { rootMargin: '-20% 0px -70% 0px' }
     );
 
-    const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+    const sections = ['home', 'skills', 'projects', 'about', 'contact'];
     sections.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
@@ -56,9 +56,9 @@ function App() {
           onViewWorkClick={() => handleScrollToSection('projects')} 
           onConnectClick={() => handleScrollToSection('contact')} 
         />
-        <About />
         <Skills />
         <Projects />
+        <About />
         <Contact />
         <Stats />
       </main>
