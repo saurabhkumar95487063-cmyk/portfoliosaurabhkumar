@@ -2107,25 +2107,26 @@ textarea {
 }
 
 /* ============================================================
-   SKILLS COMPACT MOBILE UI OVERRIDE
+   SKILLS OVERRIDE: BIG & PROMINENT (2 COLUMNS)
    ============================================================ */
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
+    gap: 1.2rem;
   }
   .skill-card {
-    padding: 1rem 0.5rem;
-    gap: 0.6rem;
-    border-radius: 12px;
+    padding: 1.8rem 1rem;
+    gap: 1.2rem;
+    border-radius: 16px;
   }
   .skill-icon-wrapper {
-    width: 46px;
-    height: 46px;
-    font-size: 1.4rem;
-    border-radius: 10px;
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+    border-radius: 14px;
   }
   .skill-name {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
+    font-weight: 700;
   }
 }
