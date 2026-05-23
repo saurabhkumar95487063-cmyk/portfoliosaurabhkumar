@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, ExternalLink, Code } from 'lucide-react';
+import Tilt from 'react-parallax-tilt';
 import { DEVELOPER_PROFILE } from '../config';
 
 const Projects = () => {
@@ -54,32 +55,34 @@ const Projects = () => {
       
       <div className="projects-grid">
         {DEVELOPER_PROFILE.projects.map((project) => (
-          <div key={project.id} className="project-card glass-panel">
-            <div className="project-img-container">
-              {project.image.includes('.') ? (
-                <img src={project.image} alt={project.title} className="project-image-real" />
-              ) : (
-                renderProjectCover(project.category)
-              )}
-              <span className="project-category">{project.category}</span>
-            </div>
-            
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              
-              <div className="project-links">
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                  <Github size={16} /> Code
-                </a>
-                {project.demo !== '#' && (
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link">
-                    <ExternalLink size={16} /> Live Demo
-                  </a>
+          <Tilt key={project.id} tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable={true} glareMaxOpacity={0.15} glareColor="#00f0ff" glarePosition="all" scale={1.02} transitionSpeed={400} tiltReverse={true}>
+            <div className="project-card glass-panel" style={{ height: '100%' }}>
+              <div className="project-img-container">
+                {project.image.includes('.') ? (
+                  <img src={project.image} alt={project.title} className="project-image-real" />
+                ) : (
+                  renderProjectCover(project.category)
                 )}
+                <span className="project-category">{project.category}</span>
+              </div>
+              
+              <div className="project-info">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                
+                <div className="project-links">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                    <Github size={16} /> Code
+                  </a>
+                  {project.demo !== '#' && (
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link">
+                      <ExternalLink size={16} /> Live Demo
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          </Tilt>
         ))}
       </div>
       </fieldset>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Rocket, Code2, Trophy, Coffee } from 'lucide-react';
+import Tilt from 'react-parallax-tilt';
 import { DEVELOPER_PROFILE } from '../config';
 
 const Stats = () => {
@@ -34,13 +35,15 @@ const Stats = () => {
     <div className="container" style={{ position: 'relative', zIndex: 1 }}>
       <div className="stats-grid">
         {statItems.map((item) => (
-          <div key={item.id} className="stats-card glass-panel">
-            <div className="stats-icon">
-              {item.icon}
+          <Tilt key={item.id} tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.15} glareColor="#00f0ff" glarePosition="all" scale={1.05} transitionSpeed={400} tiltReverse={true}>
+            <div className="stats-card glass-panel" style={{ height: '100%' }}>
+              <div className="stats-icon">
+                {item.icon}
+              </div>
+              <div className="stats-number">{item.value}</div>
+              <div className="stats-label">{item.label}</div>
             </div>
-            <div className="stats-number">{item.value}</div>
-            <div className="stats-label">{item.label}</div>
-          </div>
+          </Tilt>
         ))}
       </div>
     </div>
