@@ -56,7 +56,11 @@ const Projects = () => {
         {DEVELOPER_PROFILE.projects.map((project) => (
           <div key={project.id} className="project-card glass-panel">
             <div className="project-img-container">
-              {renderProjectCover(project.category)}
+              {project.image.includes('.') ? (
+                <img src={project.image} alt={project.title} className="project-image-real" />
+              ) : (
+                renderProjectCover(project.category)
+              )}
               <span className="project-category">{project.category}</span>
             </div>
             

@@ -70,6 +70,15 @@ export const DEVELOPER_PROFILE = {
       image: "todo_app",
       github: "https://github.com",
       demo: "#"
+    },
+    {
+      id: 4,
+      title: "CleanKart",
+      category: "Web App",
+      description: "Premium Laundry & Dry Cleaning Service at your Doorstep.",
+      image: "/cleankart.png",
+      github: "https://github.com",
+      demo: "https://cleankart.vercel.app"
     }
   ]
 };
