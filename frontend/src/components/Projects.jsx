@@ -47,7 +47,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section container">
-      <legend className="section-title"><span>Featured Projects</span></legend>
+      <legend className="section-title"><span>My Projects</span></legend>
       <hr className="section-divider" />
       
       <div className="projects-grid">
