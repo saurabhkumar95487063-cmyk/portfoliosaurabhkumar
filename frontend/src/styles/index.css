@@ -2211,3 +2211,23 @@ body {
   100% { box-shadow: 0 0 10px rgba(0, 240, 255, 0.1), inset 0 0 10px rgba(0, 240, 255, 0.05); }
 }
 
+
+/* --- PAGE FADE-IN TRANSITION --- */
+.page-fade-in {
+  animation: fadeInPage 1s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* --- MAGNETIC BUTTONS --- */
+.btn-primary, .btn-secondary, .btn-cv {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-primary:hover, .btn-secondary:hover, .btn-cv:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.3), 0 0 50px rgba(189, 0, 255, 0.15);
+}
+

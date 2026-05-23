@@ -86,7 +86,7 @@ function App() {
       {loading ? (
         <Loader />
       ) : (
-        <>
+        <div className="page-fade-in">
           <ParticleBackground />
           <div className="flashlight"></div>
           <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
@@ -103,7 +103,7 @@ function App() {
             <Stats />
           </main>
           <Footer />
-        </>
+        </div>
       )}
     </>
   );
