@@ -52,7 +52,7 @@ function App() {
   return (
     <>
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
-      <main className="main-layout">
+      <main>
         <Hero 
           onViewWorkClick={() => handleScrollToSection('projects')} 
           onConnectClick={() => handleScrollToSection('contact')} 
