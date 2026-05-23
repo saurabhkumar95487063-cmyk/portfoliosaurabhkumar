@@ -105,7 +105,8 @@ const Skills = () => {
 
   return (
     <section id="skills" className="section container">
-      <h2 className="section-title"><span>My Skills</span></h2>
+      <legend className="section-title"><span>My Skills</span></legend>
+      <hr className="section-divider" />
       <div className="skills-grid">
         {skillsList.map((skill, index) => (
           <div key={index} className="skill-card glass-panel" style={{ '--skill-color': skill.color }}>
@@ -121,3 +122,4 @@ const Skills = () => {
 };
 
 export default Skills;
+

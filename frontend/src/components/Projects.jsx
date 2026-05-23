@@ -47,7 +47,8 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section container">
-      <h2 className="section-title"><span>Featured Projects</span></h2>
+      <legend className="section-title"><span>Featured Projects</span></legend>
+      <hr className="section-divider" />
       
       <div className="projects-grid">
         {DEVELOPER_PROFILE.projects.map((project) => (
@@ -80,3 +81,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

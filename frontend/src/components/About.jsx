@@ -5,7 +5,8 @@ import { DEVELOPER_PROFILE } from '../config';
 const About = () => {
   return (
     <section id="about" className="section container">
-      <h2 className="section-title"><span>About Me</span></h2>
+      <legend className="section-title"><span>About Me</span></legend>
+      <hr className="section-divider" />
       
       <div className="about-grid">
         {/* Left Side: Bio Details */}
@@ -64,3 +65,4 @@ const About = () => {
 };
 
 export default About;
+

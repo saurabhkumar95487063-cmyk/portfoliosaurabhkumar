@@ -151,6 +151,15 @@ button, input, textarea {
   animation: gradientFlow 6s ease infinite;
 }
 
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-cyan), transparent);
+  margin: 1rem auto 3rem auto;
+  width: 80%;
+  opacity: 0.5;
+}
+
 .section-title::after {
   content: '';
   position: absolute;
@@ -1760,7 +1769,16 @@ button, input, textarea {
     margin-bottom: 1.5rem;
   }
 
-  .section-title::after {
+  .section-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-cyan), transparent);
+  margin: 1rem auto 3rem auto;
+  width: 80%;
+  opacity: 0.5;
+}
+
+.section-title::after {
     width: 40px;
     height: 2px;
     bottom: -10px;
@@ -1907,3 +1925,4 @@ button, input, textarea {
     font-size: 0.8rem;
   }
 }
+

@@ -81,7 +81,8 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section container">
-      <h2 className="section-title"><span>Let's Connect</span></h2>
+      <legend className="section-title"><span>Let's Connect</span></legend>
+      <hr className="section-divider" />
       
       <div className="contact-grid">
         {/* Left Side: Contact Information */}
@@ -195,3 +196,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
