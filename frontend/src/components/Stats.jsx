@@ -32,7 +32,7 @@ const Stats = () => {
   ];
 
   return (
-    <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+    <div className="container" style={{ position: 'relative', zIndex: 1 }} data-aos="fade-up">
       <div className="stats-grid">
         {statItems.map((item) => (
           <Tilt key={item.id} tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.15} glareColor="#00f0ff" glarePosition="all" scale={1.05} transitionSpeed={400} tiltReverse={true}>
@@ -51,3 +51,4 @@ const Stats = () => {
 };
 
 export default Stats;
+

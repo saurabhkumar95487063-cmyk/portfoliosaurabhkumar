@@ -4,7 +4,7 @@ import { DEVELOPER_PROFILE } from '../config';
 
 const About = () => {
   return (
-    <section id="about" className="section container">
+    <section id="about" className="section container" data-aos="fade-up">
       <fieldset className="section-fieldset">
         <legend className="section-title"><span>About Me</span></legend>
         <hr className="section-divider" />
@@ -67,4 +67,5 @@ const About = () => {
 };
 
 export default About;
+
 

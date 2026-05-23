@@ -89,3 +89,4 @@ const Hero = ({ onViewWorkClick, onConnectClick }) => {
 };
 
 export default Hero;
+

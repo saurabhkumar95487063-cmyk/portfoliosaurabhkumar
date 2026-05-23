@@ -47,7 +47,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section container">
+    <section id="projects" className="section container" data-aos="fade-up">
       
       <fieldset className="section-fieldset">
         <legend className="section-title"><span>My Projects</span></legend>
@@ -91,5 +91,6 @@ const Projects = () => {
 };
 
 export default Projects;
+
 
 

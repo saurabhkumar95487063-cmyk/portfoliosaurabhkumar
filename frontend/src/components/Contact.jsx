@@ -80,12 +80,17 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section container">
+    <section id="contact" className="section container" data-aos="fade-up">
       
       <fieldset className="section-fieldset">
         <legend className="section-title"><span>Let's Connect</span></legend>
       <hr className="section-divider" />
       
+      <div className="hire-me-banner glass-panel" style={{ textAlign: 'center', padding: '2rem', marginBottom: '2rem', background: 'rgba(189, 0, 255, 0.05)', border: '1px solid var(--color-purple)' }}>
+        <h3 style={{ fontSize: '1.5rem', color: 'var(--color-cyan)', marginBottom: '0.5rem', textShadow: 'var(--glow-cyan)' }}>Open to Opportunities!</h3>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>I'm currently looking for Software Development roles. Let's build something amazing together.</p>
+      </div>
+
       <div className="contact-grid">
         {/* Left Side: Contact Information */}
         <div className="contact-info-panel glass-panel">
@@ -199,5 +204,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
 

@@ -104,14 +104,15 @@ const Skills = () => {
     }
   ];
 
-  return (
-    <section id="skills" className="section container">
-      
-      <fieldset className="section-fieldset">
-        <legend className="section-title"><span>My Skills</span></legend>
-      <hr className="section-divider" />
+  const frontendSkills = skillsList.filter(s => ['HTML5', 'CSS3', 'JavaScript'].includes(s.name));
+  const backendSkills = skillsList.filter(s => ['Java', 'Python', 'C', 'PHP', 'MySQL'].includes(s.name));
+  const toolsSkills = skillsList.filter(s => ['Git', 'VS Code'].includes(s.name));
+
+  const renderSkillGrid = (skills, title) => (
+    <div className="skill-category" style={{ marginBottom: '2rem' }}>
+      <h3 style={{ color: 'var(--text-secondary)', marginBottom: '1rem', textAlign: 'center', fontSize: '1.2rem' }}>{title}</h3>
       <div className="skills-grid">
-        {skillsList.map((skill, index) => (
+        {skills.map((skill, index) => (
           <Tilt key={index} tiltMaxAngleX={15} tiltMaxAngleY={15} glareEnable={true} glareMaxOpacity={0.2} glareColor={skill.color} glarePosition="all" scale={1.05} transitionSpeed={300} tiltReverse={true}>
             <div className="skill-card glass-panel" style={{ '--skill-color': skill.color, height: '100%' }}>
               <div className="skill-icon-wrapper">
@@ -122,11 +123,26 @@ const Skills = () => {
           </Tilt>
         ))}
       </div>
+    </div>
+  );
+
+  return (
+    <section id="skills" className="section container" data-aos="fade-up">
+      
+      <fieldset className="section-fieldset">
+        <legend className="section-title"><span>My Skills</span></legend>
+      <hr className="section-divider" />
+      
+      {renderSkillGrid(frontendSkills, "Frontend")}
+      {renderSkillGrid(backendSkills, "Backend & Databases")}
+      {renderSkillGrid(toolsSkills, "Tools")}
+      
       </fieldset>
     </section>
   );
 };
 
 export default Skills;
+
 
 
