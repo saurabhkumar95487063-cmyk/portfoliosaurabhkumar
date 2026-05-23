@@ -46,7 +46,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <a href="#home" className="logo" onClick={(e) => { e.preventDefault(); handleLinkClick('home'); }}>
+        <a href="#home" className="logo neon-flicker" onClick={(e) => { e.preventDefault(); handleLinkClick('home'); }}>
           {DEVELOPER_PROFILE.name}
         </a>
 

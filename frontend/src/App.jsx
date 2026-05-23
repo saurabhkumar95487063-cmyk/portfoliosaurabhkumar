@@ -31,6 +31,17 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Flashlight Mouse Tracker
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+      document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   // Track active section on scroll using IntersectionObserver for better performance
   useEffect(() => {
     if (loading) return;
@@ -77,6 +88,7 @@ function App() {
       ) : (
         <>
           <ParticleBackground />
+          <div className="flashlight"></div>
           <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
           <main>
             <Hero 

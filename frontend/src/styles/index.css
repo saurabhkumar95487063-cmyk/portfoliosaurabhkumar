@@ -2139,3 +2139,73 @@ body {
 
 .project-image-real { width: 100%; height: 100%; object-fit: cover; border-radius: 12px 12px 0 0; }
 
+
+/* --- PREMIUM VISUAL EFFECTS --- */
+
+/* 1. Flashlight */
+.flashlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(circle 300px at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(0, 240, 255, 0.05), transparent 80%);
+}
+
+/* 2. Animated Gradient Text */
+.animated-gradient-text {
+  background: linear-gradient(-45deg, var(--color-cyan), var(--color-purple), var(--color-pink), var(--color-cyan));
+  background-size: 300%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientText 5s ease infinite;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 3. Levitation */
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 4. Cyberpunk Neon Flicker */
+.neon-flicker {
+  animation: flicker 4s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.4), 0 0 20px rgba(0, 240, 255, 0.2);
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    opacity: 0.8;
+  }
+}
+
+/* 5. Animated Glowing Borders for Glass Panels */
+/* Applying a slowly shifting multi-color shadow to simulate a moving border light */
+.glass-panel {
+  animation: borderGlowShift 8s infinite linear;
+}
+
+@keyframes borderGlowShift {
+  0% { box-shadow: 0 0 10px rgba(0, 240, 255, 0.1), inset 0 0 10px rgba(0, 240, 255, 0.05); }
+  33% { box-shadow: 0 0 10px rgba(189, 0, 255, 0.1), inset 0 0 10px rgba(189, 0, 255, 0.05); }
+  66% { box-shadow: 0 0 10px rgba(255, 0, 122, 0.1), inset 0 0 10px rgba(255, 0, 122, 0.05); }
+  100% { box-shadow: 0 0 10px rgba(0, 240, 255, 0.1), inset 0 0 10px rgba(0, 240, 255, 0.05); }
+}
+

@@ -10,7 +10,7 @@ const Hero = ({ onViewWorkClick, onConnectClick }) => {
         {/* Left Side: Info & Copy */}
         <div className="hero-text">
           <h3>Hi, I'm</h3>
-          <h1>{DEVELOPER_PROFILE.name}</h1>
+          <h1 className="animated-gradient-text" style={{ paddingBottom: '5px' }}>{DEVELOPER_PROFILE.name}</h1>
           <h2>
             BCA Student & Aspiring <br />
             <span style={{ color: 'var(--color-cyan)', textShadow: '0 0 10px rgba(0, 240, 255, 0.3)' }}>Software Developer</span>
@@ -46,7 +46,7 @@ const Hero = ({ onViewWorkClick, onConnectClick }) => {
 
         {/* Right Side: Animated Glowing Profile Wrapper */}
         <div className="hero-visual">
-          <div className="glowing-circle-container">
+          <div className="glowing-circle-container floating-element">
             <div className="glowing-bg"></div>
             <div className="orbit-circle-1"></div>
             <div className="orbit-circle-2"></div>
