@@ -2113,7 +2113,8 @@ textarea {
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
-    margin: 0 -1rem; /* Pull to the edges to remove the gap */
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
   .skill-card {
     padding: 1.2rem 0.2rem;
@@ -2129,5 +2130,12 @@ textarea {
   .skill-name {
     font-size: 0.8rem;
     font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
   }
 }
