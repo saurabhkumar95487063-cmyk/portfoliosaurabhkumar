@@ -8,7 +8,7 @@ const Projects = () => {
     switch (category) {
       case 'Java':
         return (
-          <div className="project-placeholder-img" style={{ background: 'linear-gradient(135deg, #110826 0%, #060211 100%)' }}>
+          <div className="project-placeholder-img" style={{ background: 'linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%)' }}>
             <Code size={40} style={{ color: '#EA2D2E', filter: 'drop-shadow(0 0 10px rgba(234, 45, 46, 0.4))' }} />
             <span style={{ color: '#EA2D2E', borderColor: 'rgba(234, 45, 46, 0.3)' }}>Swing / JDBC / SQL</span>
             <div style={{ fontSize: '0.75rem', opacity: 0.6 }}>Student database CRUD application</div>
@@ -16,7 +16,7 @@ const Projects = () => {
         );
       case 'HTML/CSS':
         return (
-          <div className="project-placeholder-img" style={{ background: 'linear-gradient(135deg, #092015 0%, #030a06 100%)' }}>
+          <div className="project-placeholder-img" style={{ background: 'linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%)' }}>
             <svg viewBox="0 0 100 100" width="45" height="45" fill="none" stroke="#22c55e" strokeWidth="2">
               <path d="M50 20 L80 40 L80 70 L50 90 L20 70 L20 40 Z" />
               <path d="M50 20 L50 90" />
@@ -30,7 +30,7 @@ const Projects = () => {
       case 'JavaScript':
       default:
         return (
-          <div className="project-placeholder-img" style={{ background: 'linear-gradient(135deg, #1f1b04 0%, #090801 100%)' }}>
+          <div className="project-placeholder-img" style={{ background: 'linear-gradient(135deg, #fef08a 0%, #fde047 100%)' }}>
             <svg viewBox="0 0 100 100" width="45" height="45" fill="none" stroke="#f7df1e" strokeWidth="2">
               <rect x="25" y="20" width="50" height="60" rx="5" />
               <line x1="35" y1="35" x2="65" y2="35" />
@@ -88,5 +88,6 @@ const Projects = () => {
 };
 
 export default Projects;
+
 
 
