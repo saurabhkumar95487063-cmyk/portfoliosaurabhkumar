@@ -1,0 +1,21 @@
+{
+  "name": "saurabh-portfolio-backend",
+  "version": "1.0.0",
+  "description": "Express backend server for Saurabh Kumar's portfolio, saving contact messages to SQLite database.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "setup": "npm install",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
