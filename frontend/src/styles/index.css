@@ -1,19 +1,18 @@
 /* Global Styles & Cyber Theme Design System */
 :root {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-glass: rgba(255, 255, 255, 0.7);
-  --border-glass: rgba(0, 0, 0, 0.08);
-  --border-glass-hover: rgba(99, 102, 241, 0.3);
+  --bg-primary: rgba(0, 30, 60, 0.95);
+  --bg-secondary: rgba(0, 40, 80, 0.95);
+  --bg-glass: rgba(0, 180, 255, 0.1);
+  --border-glass: rgba(189, 0, 255, 0.15);
+  --border-glass-hover: rgba(0, 240, 255, 0.3);
 
-  --color-cyan: #06b6d4;
-  --color-purple: #6366f1;
-  --color-pink: #ec4899;
-  --color-blue: #3b82f6;
-  
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --color-cyan: #00f0ff;
+  --color-purple: #bd00ff;
+  --color-pink: #ff007a;
+  --color-blue: #0070f3;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
 
   --font-primary: "Outfit", "Inter", sans-serif;
   --font-mono: "Fira Code", monospace;
@@ -22,9 +21,9 @@
   --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 
-  --glow-cyan: 0 10px 25px -5px rgba(6, 182, 212, 0.2);
-  --glow-purple: 0 10px 25px -5px rgba(99, 102, 241, 0.2);
-  --glow-pink: 0 10px 25px -5px rgba(236, 72, 153, 0.2);
+  --glow-cyan: 0 0 15px rgba(0, 240, 255, 0.4);
+  --glow-purple: 0 0 15px rgba(189, 0, 255, 0.4);
+  --glow-pink: 0 0 15px rgba(255, 0, 122, 0.4);
 }
 
 /* Reset & Base Elements */
@@ -46,16 +45,15 @@ html {
 body {
   min-height: 100vh;
   position: relative;
-  background-color: var(--bg-primary);
   background-image:
     radial-gradient(
       circle at 10% 20%,
-      rgba(99, 102, 241, 0.06) 0%,
+      rgba(189, 0, 255, 0.08) 0%,
       transparent 40%
     ),
     radial-gradient(
       circle at 90% 80%,
-      rgba(6, 182, 212, 0.06) 0%,
+      rgba(0, 240, 255, 0.08) 0%,
       transparent 40%
     );
   background-attachment: fixed;
@@ -206,10 +204,10 @@ textarea {
 }
 
 .section-fieldset {
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   padding: 0.8rem;
-  background: rgba(0, 0, 0, 0.01);
+  background: rgba(255, 255, 255, 0.01);
 }
 
 .section-divider {
@@ -268,7 +266,7 @@ textarea {
   background: rgba(6, 7, 19, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: var(--transition-normal);
 }
 
@@ -450,7 +448,7 @@ textarea {
     var(--color-purple)
   );
   background-size: 300% 100%;
-  color: var(--text-primary);
+  color: #fff;
   transition: all 0.4s ease;
   box-shadow: var(--glow-purple);
 }
@@ -469,14 +467,14 @@ textarea {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--text-primary);
   transition: var(--transition-normal);
 }
 
 .btn-secondary:hover {
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.08);
   border-color: var(--color-cyan);
   transform: translateY(-3px);
   box-shadow: var(--glow-cyan);
@@ -792,8 +790,8 @@ textarea {
 .editor-terminal {
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background: #e1e4e8;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #05060f;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   height: 100%;
   display: flex;
@@ -801,12 +799,12 @@ textarea {
 }
 
 .editor-header {
-  background: #ffffff;
+  background: #0b0c16;
   padding: 0.75rem 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .editor-dots {
@@ -854,33 +852,33 @@ textarea {
   text-align: right;
   padding-right: 1.2rem;
   user-select: none;
-  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .code-content {
   padding-left: 1.2rem;
-  color: #24292e;
+  color: #c9d1d9;
   white-space: pre;
 }
 
 /* Code Highlighting Syntaxes */
 .syntax-keyword {
-  color: #d73a49;
+  color: #ff7b72;
 }
 .syntax-variable {
-  color: #005cc5;
+  color: #79c0ff;
 }
 .syntax-string {
-  color: #005cc5;
+  color: #a5d6ff;
 }
 .syntax-property {
-  color: #22863a;
+  color: #7ee787;
 }
 .syntax-type {
-  color: #e36209;
+  color: #f2cc60;
 }
 .syntax-bracket {
-  color: #e36209;
+  color: #ff9b5c;
 }
 
 /* Skills Section */
@@ -907,8 +905,8 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   font-size: 1.8rem;
   color: var(--text-secondary);
   transition: var(--transition-normal);
@@ -1159,7 +1157,7 @@ textarea {
 .form-textarea {
   width: 100%;
   background: rgba(6, 7, 19, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
   padding: 0.8rem 1.2rem;
   color: var(--text-primary);
@@ -1213,7 +1211,7 @@ textarea {
     var(--color-purple) 0%,
     var(--color-cyan) 100%
   );
-  color: var(--text-primary);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1235,7 +1233,7 @@ textarea {
 
 /* Footer Section */
 .footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding: 3rem 0;
   margin-top: 4rem;
 }
@@ -1954,10 +1952,10 @@ textarea {
   }
 
   .section-fieldset {
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 0.8rem;
-    background: rgba(0, 0, 0, 0.01);
+    background: rgba(255, 255, 255, 0.01);
   }
 
   .section-divider {
@@ -2135,14 +2133,11 @@ body {
   .glass-panel {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    background: rgba(255, 255, 255, 0.95); /* Transparent water-like color */
+    background: rgba(0, 180, 255, 0.08); /* Transparent water-like color */
   }
 }
 
 .project-image-real { width: 100%; height: 100%; object-fit: cover; border-radius: 12px 12px 0 0; }
-
-
-
 
 
 
