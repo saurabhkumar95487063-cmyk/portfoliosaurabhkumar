@@ -1918,3 +1918,20 @@ button, input, textarea {
     font-size: 0.8rem;
   }
 }
+
+/* ============================================================
+   RESPONSIVE SECTION ORDERING (MOBILE ONLY)
+   ============================================================ */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .main-layout > section#home { order: 1; }
+  .main-layout > section#skills { order: 2; }
+  .main-layout > section#projects { order: 3; }
+  .main-layout > section#about { order: 4; }
+  .main-layout > section#contact { order: 5; }
+  .main-layout > section#stats { order: 6; }
+}
