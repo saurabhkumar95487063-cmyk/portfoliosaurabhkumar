@@ -1,7 +1,7 @@
 /* Global Styles & Cyber Theme Design System */
 :root {
-  --bg-primary: #060713;
-  --bg-secondary: #0c0e25;
+  --bg-primary: rgba(0, 30, 60, 0.95);
+  --bg-secondary: rgba(0, 40, 80, 0.95);
   --bg-glass: rgba(0, 180, 255, 0.1);
   --border-glass: rgba(189, 0, 255, 0.15);
   --border-glass-hover: rgba(0, 240, 255, 0.3);
@@ -36,7 +36,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  background-color: var(--bg-primary);
+  background-color: transparent;
   color: var(--text-primary);
   font-family: var(--font-primary);
   overflow-x: hidden;
@@ -2138,5 +2138,7 @@ body {
 }
 
 .project-image-real { width: 100%; height: 100%; object-fit: cover; border-radius: 12px 12px 0 0; }
+
+
 
 
