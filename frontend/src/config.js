@@ -1,3 +1,5 @@
+import profileImage from './assets/profile.png';
+
 export const DEVELOPER_PROFILE = {
   name: "Saurabh Kumar",
   title: "BCA Student & Aspiring Software Developer",
@@ -6,7 +8,7 @@ export const DEVELOPER_PROFILE = {
   phone: "9548706353",
   location: "Badaun, Bareilly, Uttar Pradesh, India",
   cvLink: "#",
-  profileImage: "/src/assets/profile.png",
+  profileImage: profileImage,
   socials: {
     github: "https://github.com",
     linkedin: "https://linkedin.com",
