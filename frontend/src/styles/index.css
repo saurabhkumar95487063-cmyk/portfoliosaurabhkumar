@@ -5,7 +5,7 @@
   --bg-glass: rgba(12, 14, 37, 0.6);
   --border-glass: rgba(189, 0, 255, 0.15);
   --border-glass-hover: rgba(0, 240, 255, 0.3);
-  
+
   --color-cyan: #00f0ff;
   --color-purple: #bd00ff;
   --color-pink: #ff007a;
@@ -13,14 +13,14 @@
   --text-primary: #f3f4f6;
   --text-secondary: #9ca3af;
   --text-muted: #6b7280;
-  
-  --font-primary: 'Outfit', 'Inter', sans-serif;
-  --font-mono: 'Fira Code', monospace;
-  
+
+  --font-primary: "Outfit", "Inter", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
   --transition-fast: 0.2s ease;
   --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  
+
   --glow-cyan: 0 0 15px rgba(0, 240, 255, 0.4);
   --glow-purple: 0 0 15px rgba(189, 0, 255, 0.4);
   --glow-pink: 0 0 15px rgba(255, 0, 122, 0.4);
@@ -45,9 +45,17 @@ html {
 body {
   min-height: 100vh;
   position: relative;
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(189, 0, 255, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.08) 0%, transparent 40%);
+  background-image:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(189, 0, 255, 0.08) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(0, 240, 255, 0.08) 0%,
+      transparent 40%
+    );
   background-attachment: fixed;
 }
 
@@ -73,7 +81,9 @@ a {
   transition: var(--transition-fast);
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
   font-family: inherit;
   background: none;
   border: none;
@@ -82,34 +92,70 @@ button, input, textarea {
 
 /* Animations */
 @keyframes pulseGlow {
-  0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 15px var(--color-cyan)); }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: drop-shadow(0 0 15px var(--color-cyan));
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes spinSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spinCounter {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes breathGlow {
-  0%, 100% { transform: scale(1); opacity: 0.5; filter: blur(20px); }
-  50% { transform: scale(1.15); opacity: 0.8; filter: blur(30px); }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+    filter: blur(20px);
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+    filter: blur(30px);
+  }
 }
 
 /* Global Layout Utilities */
@@ -144,7 +190,13 @@ button, input, textarea {
 }
 
 .section-title span {
-  background: linear-gradient(90deg, var(--color-cyan), var(--color-purple), var(--color-pink), var(--color-cyan));
+  background: linear-gradient(
+    90deg,
+    var(--color-cyan),
+    var(--color-purple),
+    var(--color-pink),
+    var(--color-cyan)
+  );
   background-size: 300% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -161,14 +213,19 @@ button, input, textarea {
 .section-divider {
   border: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-cyan), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-cyan),
+    transparent
+  );
   margin: 1rem auto 3rem auto;
   width: 80%;
   opacity: 0.5;
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -15px;
   left: 50%;
@@ -192,9 +249,10 @@ button, input, textarea {
 
 .glass-panel:hover {
   border-color: var(--border-glass-hover);
-  box-shadow: 0 12px 40px 0 rgba(0, 240, 255, 0.12), 
-              0 0 20px rgba(0, 240, 255, 0.08),
-              inset 0 0 20px rgba(0, 240, 255, 0.05);
+  box-shadow:
+    0 12px 40px 0 rgba(0, 240, 255, 0.12),
+    0 0 20px rgba(0, 240, 255, 0.08),
+    inset 0 0 20px rgba(0, 240, 255, 0.05);
   transform: translateY(-6px);
 }
 
@@ -229,7 +287,11 @@ button, input, textarea {
   font-family: var(--font-primary);
   font-weight: 800;
   font-size: 1.5rem;
-  background: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-purple) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-cyan) 0%,
+    var(--color-purple) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: flex;
@@ -251,13 +313,14 @@ button, input, textarea {
   padding: 0.5rem 0;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--text-primary);
   text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -267,7 +330,8 @@ button, input, textarea {
   transition: var(--transition-normal);
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 
@@ -331,7 +395,11 @@ button, input, textarea {
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-purple) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-cyan) 0%,
+    var(--color-purple) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
@@ -372,7 +440,13 @@ button, input, textarea {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  background: linear-gradient(90deg, var(--color-purple), var(--color-cyan), var(--color-pink), var(--color-purple));
+  background: linear-gradient(
+    90deg,
+    var(--color-purple),
+    var(--color-cyan),
+    var(--color-pink),
+    var(--color-purple)
+  );
   background-size: 300% 100%;
   color: #fff;
   transition: all 0.4s ease;
@@ -460,7 +534,12 @@ button, input, textarea {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 240, 255, 0.25) 0%, rgba(189, 0, 255, 0.15) 50%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 240, 255, 0.25) 0%,
+    rgba(189, 0, 255, 0.15) 50%,
+    transparent 70%
+  );
   filter: blur(20px);
   animation: breathGlow 4s ease-in-out infinite;
 }
@@ -489,16 +568,26 @@ button, input, textarea {
   height: 100%;
   border-radius: 50%;
   padding: 6px;
-  background: linear-gradient(90deg, var(--color-cyan), var(--color-purple), var(--color-pink), var(--color-cyan));
+  background: linear-gradient(
+    90deg,
+    var(--color-cyan),
+    var(--color-purple),
+    var(--color-pink),
+    var(--color-cyan)
+  );
   background-size: 300% 100%;
   animation: gradientFlow 4s linear infinite;
-  box-shadow: var(--glow-purple), 0 0 25px rgba(189, 0, 255, 0.25);
+  box-shadow:
+    var(--glow-purple),
+    0 0 25px rgba(189, 0, 255, 0.25);
   overflow: hidden; /* clips image to circle shape */
   transition: all 0.4s ease;
 }
 
 .profile-wrapper:hover {
-  box-shadow: var(--glow-cyan), 0 0 35px rgba(0, 240, 255, 0.45);
+  box-shadow:
+    var(--glow-cyan),
+    0 0 35px rgba(0, 240, 255, 0.45);
   animation-duration: 1.5s;
 }
 
@@ -541,7 +630,9 @@ button, input, textarea {
   gap: 0.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   z-index: 5;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .badge-1 {
@@ -563,8 +654,12 @@ button, input, textarea {
   color: var(--color-cyan);
 }
 
-.badge-1 .badge-icon { color: var(--color-cyan); }
-.badge-2 .badge-icon { color: var(--color-purple); }
+.badge-1 .badge-icon {
+  color: var(--color-cyan);
+}
+.badge-2 .badge-icon {
+  color: var(--color-purple);
+}
 
 /* Orbit Keyframes: Circular movement with counter-rotation to keep badges upright */
 @keyframes orbit-1 {
@@ -572,16 +667,19 @@ button, input, textarea {
     transform: translate(-50%, -50%) rotate(0deg) translateX(180px) rotate(0deg);
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(180px) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translateX(180px)
+      rotate(-360deg);
   }
 }
 
 @keyframes orbit-2 {
   from {
-    transform: translate(-50%, -50%) rotate(180deg) translateX(180px) rotate(-180deg);
+    transform: translate(-50%, -50%) rotate(180deg) translateX(180px)
+      rotate(-180deg);
   }
   to {
-    transform: translate(-50%, -50%) rotate(540deg) translateX(180px) rotate(-540deg);
+    transform: translate(-50%, -50%) rotate(540deg) translateX(180px)
+      rotate(-540deg);
   }
 }
 
@@ -720,9 +818,15 @@ button, input, textarea {
   border-radius: 50%;
 }
 
-.dot-red { background-color: #ef4444; }
-.dot-yellow { background-color: #eab308; }
-.dot-green { background-color: #22c55e; }
+.dot-red {
+  background-color: #ef4444;
+}
+.dot-yellow {
+  background-color: #eab308;
+}
+.dot-green {
+  background-color: #22c55e;
+}
 
 .editor-tab {
   color: var(--text-muted);
@@ -758,12 +862,24 @@ button, input, textarea {
 }
 
 /* Code Highlighting Syntaxes */
-.syntax-keyword { color: #ff7b72; }
-.syntax-variable { color: #79c0ff; }
-.syntax-string { color: #a5d6ff; }
-.syntax-property { color: #7ee787; }
-.syntax-type { color: #f2cc60; }
-.syntax-bracket { color: #ff9b5c; }
+.syntax-keyword {
+  color: #ff7b72;
+}
+.syntax-variable {
+  color: #79c0ff;
+}
+.syntax-string {
+  color: #a5d6ff;
+}
+.syntax-property {
+  color: #7ee787;
+}
+.syntax-type {
+  color: #f2cc60;
+}
+.syntax-bracket {
+  color: #ff9b5c;
+}
 
 /* Skills Section */
 .skills-grid {
@@ -858,7 +974,11 @@ button, input, textarea {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(12, 14, 37, 0.8) 0%, rgba(6, 7, 19, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(12, 14, 37, 0.8) 0%,
+    rgba(6, 7, 19, 0.9) 100%
+  );
   color: var(--text-muted);
   gap: 0.5rem;
 }
@@ -1033,7 +1153,8 @@ button, input, textarea {
   letter-spacing: 0.5px;
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
   width: 100%;
   background: rgba(6, 7, 19, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1049,7 +1170,8 @@ button, input, textarea {
   resize: vertical;
 }
 
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
   border-color: var(--color-cyan);
   box-shadow: 0 0 10px rgba(0, 240, 255, 0.15);
   background: rgba(6, 7, 19, 0.8);
@@ -1084,7 +1206,11 @@ button, input, textarea {
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
-  background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-cyan) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-purple) 0%,
+    var(--color-cyan) 100%
+  );
   color: #fff;
   display: flex;
   align-items: center;
@@ -1341,13 +1467,25 @@ button, input, textarea {
   }
 
   @keyframes orbit-1 {
-    from { transform: translate(-50%, -50%) rotate(0deg) translateX(110px) rotate(0deg); }
-    to   { transform: translate(-50%, -50%) rotate(360deg) translateX(110px) rotate(-360deg); }
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(110px)
+        rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(110px)
+        rotate(-360deg);
+    }
   }
 
   @keyframes orbit-2 {
-    from { transform: translate(-50%, -50%) rotate(180deg) translateX(110px) rotate(-180deg); }
-    to   { transform: translate(-50%, -50%) rotate(540deg) translateX(110px) rotate(-540deg); }
+    from {
+      transform: translate(-50%, -50%) rotate(180deg) translateX(110px)
+        rotate(-180deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(540deg) translateX(110px)
+        rotate(-540deg);
+    }
   }
 
   .float-badge {
@@ -1494,13 +1632,25 @@ button, input, textarea {
   }
 
   @keyframes orbit-1 {
-    from { transform: translate(-50%, -50%) rotate(0deg) translateX(90px) rotate(0deg); }
-    to   { transform: translate(-50%, -50%) rotate(360deg) translateX(90px) rotate(-360deg); }
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(90px)
+        rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(90px)
+        rotate(-360deg);
+    }
   }
 
   @keyframes orbit-2 {
-    from { transform: translate(-50%, -50%) rotate(180deg) translateX(90px) rotate(-180deg); }
-    to   { transform: translate(-50%, -50%) rotate(540deg) translateX(90px) rotate(-540deg); }
+    from {
+      transform: translate(-50%, -50%) rotate(180deg) translateX(90px)
+        rotate(-180deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(540deg) translateX(90px)
+        rotate(-540deg);
+    }
   }
 
   .float-badge {
@@ -1594,13 +1744,25 @@ button, input, textarea {
   }
 
   @keyframes orbit-1 {
-    from { transform: translate(-50%, -50%) rotate(0deg) translateX(78px) rotate(0deg); }
-    to   { transform: translate(-50%, -50%) rotate(360deg) translateX(78px) rotate(-360deg); }
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(78px)
+        rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(78px)
+        rotate(-360deg);
+    }
   }
 
   @keyframes orbit-2 {
-    from { transform: translate(-50%, -50%) rotate(180deg) translateX(78px) rotate(-180deg); }
-    to   { transform: translate(-50%, -50%) rotate(540deg) translateX(78px) rotate(-540deg); }
+    from {
+      transform: translate(-50%, -50%) rotate(180deg) translateX(78px)
+        rotate(-180deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(540deg) translateX(78px)
+        rotate(-540deg);
+    }
   }
 
   .float-badge {
@@ -1747,13 +1909,25 @@ button, input, textarea {
 
   /* Reduce orbit radius so badges stay inside 320px screen */
   @keyframes orbit-1 {
-    from { transform: translate(-50%, -50%) rotate(0deg) translateX(65px) rotate(0deg); }
-    to   { transform: translate(-50%, -50%) rotate(360deg) translateX(65px) rotate(-360deg); }
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(65px)
+        rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(65px)
+        rotate(-360deg);
+    }
   }
 
   @keyframes orbit-2 {
-    from { transform: translate(-50%, -50%) rotate(180deg) translateX(65px) rotate(-180deg); }
-    to   { transform: translate(-50%, -50%) rotate(540deg) translateX(65px) rotate(-540deg); }
+    from {
+      transform: translate(-50%, -50%) rotate(180deg) translateX(65px)
+        rotate(-180deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(540deg) translateX(65px)
+        rotate(-540deg);
+    }
   }
 
   /* Tiny compact badges */
@@ -1778,22 +1952,27 @@ button, input, textarea {
   }
 
   .section-fieldset {
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 0.8rem;
-  background: rgba(255, 255, 255, 0.01);
-}
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.01);
+  }
 
-.section-divider {
-  border: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-cyan), transparent);
-  margin: 1rem auto 3rem auto;
-  width: 80%;
-  opacity: 0.5;
-}
+  .section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-cyan),
+      transparent
+    );
+    margin: 1rem auto 3rem auto;
+    width: 80%;
+    opacity: 0.5;
+  }
 
-.section-title::after {
+  .section-title::after {
     width: 40px;
     height: 2px;
     bottom: -10px;
@@ -1941,5 +2120,11 @@ button, input, textarea {
   }
 }
 
-
-
+html,
+body {
+  overflow-x: hidden;
+}
+.section-fieldset {
+  min-width: 0;
+  width: 100%;
+}
