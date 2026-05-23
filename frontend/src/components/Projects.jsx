@@ -47,7 +47,9 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section container">
-      <legend className="section-title"><span>My Projects</span></legend>
+      
+      <fieldset className="section-fieldset">
+        <legend className="section-title"><span>My Projects</span></legend>
       <hr className="section-divider" />
       
       <div className="projects-grid">
@@ -76,9 +78,11 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      </fieldset>
     </section>
   );
 };
 
 export default Projects;
+
 

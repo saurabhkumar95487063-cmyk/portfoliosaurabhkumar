@@ -151,6 +151,13 @@ button, input, textarea {
   animation: gradientFlow 6s ease infinite;
 }
 
+.section-fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.01);
+}
+
 .section-divider {
   border: 0;
   height: 1px;
@@ -1770,7 +1777,14 @@ button, input, textarea {
     margin-bottom: 1.5rem;
   }
 
-  .section-divider {
+  .section-fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.section-divider {
   border: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-cyan), transparent);
@@ -1926,4 +1940,6 @@ button, input, textarea {
     font-size: 0.8rem;
   }
 }
+
+
 

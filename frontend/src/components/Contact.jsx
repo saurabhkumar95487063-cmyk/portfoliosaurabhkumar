@@ -81,7 +81,9 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section container">
-      <legend className="section-title"><span>Let's Connect</span></legend>
+      
+      <fieldset className="section-fieldset">
+        <legend className="section-title"><span>Let's Connect</span></legend>
       <hr className="section-divider" />
       
       <div className="contact-grid">
@@ -191,9 +193,11 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      </fieldset>
     </section>
   );
 };
 
 export default Contact;
+
 

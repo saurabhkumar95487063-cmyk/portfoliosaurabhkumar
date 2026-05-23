@@ -105,7 +105,9 @@ const Skills = () => {
 
   return (
     <section id="skills" className="section container">
-      <legend className="section-title"><span>My Skills</span></legend>
+      
+      <fieldset className="section-fieldset">
+        <legend className="section-title"><span>My Skills</span></legend>
       <hr className="section-divider" />
       <div className="skills-grid">
         {skillsList.map((skill, index) => (
@@ -117,9 +119,11 @@ const Skills = () => {
           </div>
         ))}
       </div>
+      </fieldset>
     </section>
   );
 };
 
 export default Skills;
+
 
