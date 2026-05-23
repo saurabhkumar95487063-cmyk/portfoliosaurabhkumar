@@ -60,6 +60,7 @@ function App() {
         <Projects />
         <About />
         <Contact />
+        <hr className="section-divider" />
         <Stats />
       </main>
       <Footer />
