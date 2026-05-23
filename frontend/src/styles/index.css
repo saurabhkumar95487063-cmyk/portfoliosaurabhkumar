@@ -1997,28 +1997,6 @@ textarea {
     padding-right: 0.8rem;
   }
 
-  /* ── Skills ──────────────────────────────────── */
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.6rem;
-  }
-
-  .skill-card {
-    padding: 1rem 0.6rem;
-    gap: 0.6rem;
-  }
-
-  .skill-icon-wrapper {
-    width: 44px;
-    height: 44px;
-    font-size: 1.3rem;
-    border-radius: 10px;
-  }
-
-  .skill-name {
-    font-size: 0.8rem;
-  }
-
   /* ── Projects ────────────────────────────────── */
   .project-img-container {
     height: 130px;
