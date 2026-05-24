@@ -2201,7 +2201,7 @@ body {
 /* 5. Animated Glowing Borders for Glass Panels */
 /* Applying a slowly shifting multi-color shadow to simulate a moving border light */
 .glass-panel {
-  animation: borderGlowShift 8s infinite linear;
+  animation: borderGlowShift 20s infinite linear;
 }
 
 @keyframes borderGlowShift {
@@ -2231,3 +2231,50 @@ body {
   box-shadow: 0 0 25px rgba(0, 240, 255, 0.3), 0 0 50px rgba(189, 0, 255, 0.15);
 }
 
+/* --- CSS Particle Drift Animation --- */
+@keyframes cssParticleDrift {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(30px, -20px); }
+  50%  { transform: translate(-20px, 30px); }
+  75%  { transform: translate(15px, 15px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* --- PERFORMANCE: Disable heavy effects on mobile --- */
+@media (max-width: 768px) {
+  .flashlight {
+    display: none !important;
+  }
+
+  .glass-panel {
+    animation: none;
+  }
+
+  .glowing-bg {
+    animation: none;
+    opacity: 0.4;
+  }
+
+  .orbit-circle-1,
+  .orbit-circle-2 {
+    animation-duration: 60s; /* slow down orbit spin */
+  }
+
+  .floating-element {
+    animation: none; /* disable float on mobile */
+  }
+
+  .badge-1,
+  .badge-2 {
+    animation-duration: 40s; /* slow orbiting badges */
+  }
+}
+
+/* --- Respect user preference for reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-import Tilt from 'react-parallax-tilt';
 
 const Skills = () => {
   const skillsList = [
@@ -113,14 +112,12 @@ const Skills = () => {
       <h3 style={{ color: 'var(--text-secondary)', marginBottom: '1rem', textAlign: 'center', fontSize: '1.2rem' }}>{title}</h3>
       <div className="skills-grid">
         {skills.map((skill, index) => (
-          <Tilt key={index} tiltMaxAngleX={15} tiltMaxAngleY={15} glareEnable={true} glareMaxOpacity={0.2} glareColor={skill.color} glarePosition="all" scale={1.05} transitionSpeed={300} tiltReverse={true}>
-            <div className="skill-card glass-panel" style={{ '--skill-color': skill.color, height: '100%' }}>
-              <div className="skill-icon-wrapper">
-                {skill.svg}
-              </div>
-              <div className="skill-name">{skill.name}</div>
+          <div key={index} className="skill-card glass-panel" style={{ '--skill-color': skill.color, height: '100%' }}>
+            <div className="skill-icon-wrapper">
+              {skill.svg}
             </div>
-          </Tilt>
+            <div className="skill-name">{skill.name}</div>
+          </div>
         ))}
       </div>
     </div>
@@ -143,6 +140,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-
-

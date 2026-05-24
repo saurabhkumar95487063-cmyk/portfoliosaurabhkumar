@@ -1,84 +1,56 @@
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
+import React from 'react';
 
+/**
+ * Lightweight CSS-only particle background.
+ * Replaces the heavy react-tsparticles library that was
+ * causing high CPU/GPU usage and device heating.
+ * Uses simple CSS animations on small divs instead of canvas rendering.
+ */
 const ParticleBackground = () => {
-  const particlesInit = useCallback(async engine => {
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadSlim(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async container => {
-    // console.log(container);
-  }, []);
+  // Only 12 particles — enough for ambiance, light on resources
+  const particles = Array.from({ length: 12 }, (_, i) => ({
+    id: i,
+    size: 2 + Math.random() * 3,
+    left: Math.random() * 100,
+    top: Math.random() * 100,
+    duration: 15 + Math.random() * 25,
+    delay: Math.random() * -20,
+    opacity: 0.15 + Math.random() * 0.2,
+    color: i % 2 === 0 ? 'var(--color-cyan)' : 'var(--color-purple)',
+  }));
 
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
-      options={{
-        background: {
-          color: {
-            value: "transparent",
-          },
-        },
-        fpsLimit: 60,
-        particles: {
-          color: {
-            value: ["#00f0ff", "#bd00ff"],
-          },
-          links: {
-            color: "#ffffff",
-            distance: 150,
-            enable: true,
-            opacity: 0.1,
-            width: 1,
-          },
-          move: {
-            direction: "none",
-            enable: true,
-            outModes: {
-              default: "bounce",
-            },
-            random: false,
-            speed: 1,
-            straight: false,
-          },
-          number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 40,
-          },
-          opacity: {
-            value: 0.3,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            value: { min: 1, max: 3 },
-          },
-        },
-        detectRetina: true,
-        fullScreen: {
-          enable: true,
-          zIndex: -1,
-        },
-      }}
+    <div
       style={{
-        position: "absolute",
+        position: 'fixed',
         top: 0,
         left: 0,
-        width: "100%",
-        height: "100%",
-        pointerEvents: "none", // VERY IMPORTANT so it doesn't block clicks
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none',
+        zIndex: -1,
+        overflow: 'hidden',
       }}
-    />
+      aria-hidden="true"
+    >
+      {particles.map((p) => (
+        <div
+          key={p.id}
+          style={{
+            position: 'absolute',
+            width: `${p.size}px`,
+            height: `${p.size}px`,
+            left: `${p.left}%`,
+            top: `${p.top}%`,
+            borderRadius: '50%',
+            backgroundColor: p.color,
+            opacity: p.opacity,
+            animation: `cssParticleDrift ${p.duration}s ease-in-out ${p.delay}s infinite`,
+            willChange: 'transform',
+          }}
+        />
+      ))}
+    </div>
   );
 };
 

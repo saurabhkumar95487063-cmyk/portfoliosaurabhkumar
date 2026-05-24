@@ -31,15 +31,27 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Flashlight Mouse Tracker
+  // Flashlight Mouse Tracker — throttled & desktop-only
   useEffect(() => {
+    // Skip on touch/mobile devices — no mouse cursor
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
+    if (isTouchDevice) return;
+
+    let rafId = null;
     const handleMouseMove = (e) => {
-      document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
-      document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+      if (rafId) return; // throttle to 1 update per animation frame
+      rafId = requestAnimationFrame(() => {
+        document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+        document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+        rafId = null;
+      });
     };
     
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   // Track active section on scroll using IntersectionObserver for better performance
