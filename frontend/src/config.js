@@ -10,14 +10,14 @@ export const DEVELOPER_PROFILE = {
   cvLink: "#",
   profileImage: profileImage,
   socials: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    instagram: "https://instagram.com",
+    github: "https://github.com/saurabhkumar95487063-cmyk",
+    linkedin: "https://linkedin.com",       // TODO: Apna LinkedIn profile URL daalo
+    instagram: "https://instagram.com",      // TODO: Apna Instagram profile URL daalo
     email: "mailto:saurabhkumar95487063@gmail.com"
   },
   stats: {
-    projectsCompleted: 10,
-    technologies: 5,
+    projectsCompleted: 4,
+    technologies: 8,
     certifications: 3,
     hoursCoding: 200
   },
@@ -50,7 +50,7 @@ export const DEVELOPER_PROFILE = {
       category: "Java",
       description: "Desktop application to manage student records, marks, and attendance.",
       image: "student_management",
-      github: "https://github.com",
+      github: "https://github.com/saurabhkumar95487063-cmyk",  // TODO: actual repo link daalo
       demo: "#"
     },
     {
@@ -59,7 +59,7 @@ export const DEVELOPER_PROFILE = {
       category: "HTML/CSS",
       description: "Responsive website for a plant store with beautiful UI and smooth animations.",
       image: "plant_website",
-      github: "https://github.com",
+      github: "https://github.com/saurabhkumar95487063-cmyk",  // TODO: actual repo link daalo
       demo: "#"
     },
     {
@@ -68,7 +68,7 @@ export const DEVELOPER_PROFILE = {
       category: "JavaScript",
       description: "A simple and interactive to-do list app to organize daily tasks.",
       image: "todo_app",
-      github: "https://github.com",
+      github: "https://github.com/saurabhkumar95487063-cmyk",  // TODO: actual repo link daalo
       demo: "#"
     },
     {
@@ -77,7 +77,7 @@ export const DEVELOPER_PROFILE = {
       category: "Web App",
       description: "Premium Laundry & Dry Cleaning Service at your Doorstep.",
       image: "/cleankart.png",
-      github: "https://github.com",
+      github: "https://github.com/saurabhkumar95487063-cmyk",  // TODO: actual repo link daalo
       demo: "https://cleankart.vercel.app"
     }
   ]
