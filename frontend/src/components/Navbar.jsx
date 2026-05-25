@@ -4,6 +4,7 @@ import { DEVELOPER_PROFILE } from '../config';
 
 const Navbar = ({ activeSection, setActiveSection }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +36,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
   ];
 
   const handleLinkClick = (id) => {
+    setMobileMenuOpen(false);
     setActiveSection(id);
     const element = document.getElementById(id);
     if (element) {
@@ -57,9 +59,9 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             {DEVELOPER_PROFILE.name}
           </a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop/Mobile Navigation Drawer */}
           <nav>
-            <ul className="nav-links">
+            <ul className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
               {navItems.map((item) => (
                 <li key={item.id}>
                   <a
@@ -74,13 +76,26 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                   </a>
                 </li>
               ))}
+              {mobileMenuOpen && (
+                <li>
+                  <button className="btn-cv" onClick={() => window.open(DEVELOPER_PROFILE.cvLink, '_blank')}>
+                    <Download size={16} /> Download CV
+                  </button>
+                </li>
+              )}
             </ul>
           </nav>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <button className="btn-cv" onClick={() => window.open(DEVELOPER_PROFILE.cvLink, '_blank')}>
+            <button className="btn-cv" style={{ display: mobileMenuOpen ? 'none' : 'flex' }} onClick={() => window.open(DEVELOPER_PROFILE.cvLink, '_blank')}>
               <Download size={16} /> Download CV
             </button>
+            
+            <div className={`menu-btn ${mobileMenuOpen ? 'open' : ''}`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </header>
