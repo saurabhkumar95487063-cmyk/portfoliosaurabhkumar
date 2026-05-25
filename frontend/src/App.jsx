@@ -98,24 +98,26 @@ function App() {
       {loading ? (
         <Loader />
       ) : (
-        <div className="page-fade-in">
-          <ParticleBackground />
-          <div className="flashlight"></div>
+        <>
           <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
-          <main>
-            <Hero 
-              onViewWorkClick={() => handleScrollToSection('projects')} 
-              onConnectClick={() => handleScrollToSection('contact')} 
-            />
-            <Skills />
-            <Projects />
-            <About />
-            <Contact />
-            <hr className="section-divider" />
-            <Stats />
-          </main>
-          <Footer />
-        </div>
+          <div className="page-fade-in">
+            <ParticleBackground />
+            <div className="flashlight"></div>
+            <main>
+              <Hero 
+                onViewWorkClick={() => handleScrollToSection('projects')} 
+                onConnectClick={() => handleScrollToSection('contact')} 
+              />
+              <Skills />
+              <Projects />
+              <About />
+              <Contact />
+              <hr className="section-divider" />
+              <Stats />
+            </main>
+            <Footer />
+          </div>
+        </>
       )}
     </>
   );
