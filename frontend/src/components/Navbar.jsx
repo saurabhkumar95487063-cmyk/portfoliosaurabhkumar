@@ -104,10 +104,14 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             >
               {isWork ? (
                 <div className="work-icon-wrapper">
-                  <Icon size={24} />
+                  <Icon size={20} style={{ transform: 'translateY(-1px)' }} />
+                  <span className="mobile-nav-label">{item.label}</span>
                 </div>
               ) : (
-                <Icon size={22} />
+                <>
+                  <Icon size={22} />
+                  <span className="mobile-nav-label">{item.label}</span>
+                </>
               )}
             </a>
           );
