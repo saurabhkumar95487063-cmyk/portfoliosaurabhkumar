@@ -1585,10 +1585,7 @@ textarea {
     }
   }
 
-  .float-badge {
-    padding: 0.3rem 0.55rem;
-    gap: 0.35rem;
-  }
+
 
   /* ── Section Title ──────────────────── */
   .section-title {
@@ -1750,10 +1747,7 @@ textarea {
     }
   }
 
-  .float-badge {
-    padding: 0.25rem 0.45rem;
-    border-radius: 6px;
-  }
+
 
   /* ── Section Title ──────────────────── */
   .section-title {
@@ -1862,9 +1856,7 @@ textarea {
     }
   }
 
-  .float-badge {
-    padding: 0.2rem 0.4rem;
-  }
+
 
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2027,20 +2019,7 @@ textarea {
     }
   }
 
-  /* Tiny compact badges */
-  .float-badge {
-    padding: 0.2rem 0.4rem;
-    font-size: 0.55rem;
-    gap: 0.25rem;
-    border-radius: 5px;
-    white-space: nowrap;
-  }
 
-  .float-badge svg {
-    width: 10px;
-    height: 10px;
-    min-width: 10px;
-  }
 
   /* ── Section Title ───────────────────────────── */
   .section-title {
