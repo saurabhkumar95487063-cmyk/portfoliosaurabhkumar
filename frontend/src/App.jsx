@@ -100,8 +100,8 @@ function App() {
       ) : (
         <>
           <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
+          <ParticleBackground />
           <div className="page-fade-in">
-            <ParticleBackground />
             <div className="flashlight"></div>
             <main>
               <Hero 
