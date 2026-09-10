@@ -16,7 +16,7 @@ export const DEVELOPER_PROFILE = {
     email: "mailto:saurabhkumar95487063@gmail.com"
   },
   stats: {
-    projectsCompleted: 4,
+    projectsCompleted: 5,
     technologies: 8,
     certifications: 3,
     hoursCoding: 200
@@ -46,39 +46,49 @@ export const DEVELOPER_PROFILE = {
   projects: [
     {
       id: 1,
-      title: "Student Management System",
-      category: "Java",
-      description: "Desktop application to manage student records, marks, and attendance.",
-      image: "student_management",
-      github: "https://github.com/saurabhkumar95487063-cmyk",  // TODO: actual repo link daalo
-      demo: "#"
+      title: "MyHospital - Healthcare Platform",
+      category: "Full Stack / Android App",
+      description: "Full Stack Hospital Management System & Android App with doctor appointment booking, tele-consultations, emergency services & patient medical records.",
+      image: "/myhospital.png",
+      github: "https://github.com/saurabhkumar95487063-cmyk/MyHospital",
+      demo: "https://github.com/saurabhkumar95487063-cmyk/MyHospital",
+      apk: "/MyHospital.apk"
     },
     {
       id: 2,
-      title: "Plant Website",
-      category: "HTML/CSS",
-      description: "Responsive website for a plant store with beautiful UI and smooth animations.",
-      image: "plant_website",
-      github: "https://github.com/saurabhkumar95487063-cmyk",  // TODO: actual repo link daalo
-      demo: "#"
-    },
-    {
-      id: 3,
-      title: "To-Do List Web App",
-      category: "JavaScript",
-      description: "A simple and interactive to-do list app to organize daily tasks.",
-      image: "todo_app",
-      github: "https://github.com/saurabhkumar95487063-cmyk",  // TODO: actual repo link daalo
-      demo: "#"
-    },
-    {
-      id: 4,
       title: "CleanKart",
       category: "Web App",
       description: "Premium Laundry & Dry Cleaning Service at your Doorstep.",
       image: "/cleankart.png",
-      github: "https://github.com/saurabhkumar95487063-cmyk",  // TODO: actual repo link daalo
+      github: "https://github.com/saurabhkumar95487063-cmyk",
       demo: "https://cleankart.vercel.app"
+    },
+    {
+      id: 3,
+      title: "Student Management System",
+      category: "Java",
+      description: "Desktop application to manage student records, marks, and attendance.",
+      image: "student_management",
+      github: "https://github.com/saurabhkumar95487063-cmyk",
+      demo: "#"
+    },
+    {
+      id: 4,
+      title: "Plant Website",
+      category: "HTML/CSS",
+      description: "Responsive website for a plant store with beautiful UI and smooth animations.",
+      image: "plant_website",
+      github: "https://github.com/saurabhkumar95487063-cmyk",
+      demo: "#"
+    },
+    {
+      id: 5,
+      title: "To-Do List Web App",
+      category: "JavaScript",
+      description: "A simple and interactive to-do list app to organize daily tasks.",
+      image: "todo_app",
+      github: "https://github.com/saurabhkumar95487063-cmyk",
+      demo: "#"
     }
   ]
 };

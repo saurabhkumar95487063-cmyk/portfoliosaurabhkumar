@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ExternalLink, Code } from 'lucide-react';
+import { Github, ExternalLink, Code, Download } from 'lucide-react';
 import Tilt from 'react-parallax-tilt';
 import { DEVELOPER_PROFILE } from '../config';
 
@@ -71,12 +71,19 @@ const Projects = () => {
                 <p>{project.description}</p>
                 
                 <div className="project-links">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                    <Github size={16} /> Code
-                  </a>
-                  {project.demo !== '#' && (
+                  {project.github && project.github !== '#' && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                      <Github size={16} /> Code
+                    </a>
+                  )}
+                  {project.demo && project.demo !== '#' && (
                     <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link">
                       <ExternalLink size={16} /> Live Demo
+                    </a>
+                  )}
+                  {project.apk && (
+                    <a href={project.apk} download className="project-link" style={{ borderColor: 'rgba(34, 197, 94, 0.5)', color: '#4ade80', background: 'rgba(34, 197, 94, 0.1)' }}>
+                      <Download size={16} /> Download APK
                     </a>
                   )}
                 </div>
