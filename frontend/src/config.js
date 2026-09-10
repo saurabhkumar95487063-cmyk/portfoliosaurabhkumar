@@ -51,8 +51,7 @@ export const DEVELOPER_PROFILE = {
       description: "Full Stack Hospital Management System & Android App with doctor appointment booking, tele-consultations, emergency services & patient medical records.",
       image: "/myhospital.png",
       github: "https://github.com/saurabhkumar95487063-cmyk/MyHospital",
-      demo: "https://myhospital-alpha.vercel.app/",
-      apk: "/MyHospital.apk"
+      demo: "https://myhospital-alpha.vercel.app/"
     },
     {
       id: 2,
